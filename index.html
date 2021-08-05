@@ -9,34 +9,47 @@
         <link rel="icon" type="imagem/png" href="img/console.png"/>
     </head>
     <body>
-        <div class="game">
-            <div class="info">
-                <h2 class="first">Computer Choice:
-                    <br>
-                    <span id="computer_choice"></span>
-                </h2>
-                <h2>Your Choice:
-                    <br>
-                    <span id="user_choice"></span>
-                </h2>
-                <h2>Result:
-                    <br>
-                    <span id="result"></span>
-                </h2>
-                <div class="imgs">
-                    <div id="computer_img">
-                        <img src="img/left.png">
-                    </div>
-                    <div id="user_img">
-                        <img src="img/right.png">
+        <div class="section">
+            <div class="game">
+                <div class="info">
+                    <h2 class="first">Computer Choice:
+                        <br>
+                        <span id="computer_choice"></span>
+                    </h2>
+                    <h2>Your Choice:
+                        <br>
+                        <span id="user_choice"></span>
+                    </h2>
+                    <h2>Result:
+                        <br>
+                        <span id="result"></span>
+                    </h2>
+                    <div class="imgs">
+                        <div id="computer_img">
+                            <img src="img/left.png">
+                        </div>
+                        <div id="user_img">
+                            <img src="img/right.png">
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="buttons">
-                <button id="rock">Rock</button><br>
-                <button id="paper">Paper</button><br>
-                <button id="scissors">Scissors</button>
+                <div class="buttons">
+                    <button id="rock">Rock</button><br>
+                    <button id="paper">Paper</button><br>
+                    <button id="scissors">Scissors</button>
+                </div>
+            </div>
+            <div class="scoreboard">
+                <div class="players">
+                    <div class="player_c">Computer</div>
+                    <div class="player_u">You</div>
+                </div>
+                <br>
+                <div class="score">
+                    <div id="score_c">0</div>
+                    <div id="score_u">0</div>
+                </div>
             </div>
         </div>
         <script src="javascript/jquery.min.js"></script>

@@ -4,6 +4,8 @@ const result = document.getElementById('result')
 const possibleChoices = document.querySelectorAll('button')
 const computerImg = document.getElementById('computer_img')
 const userImg = document.getElementById('user_img')
+var computerScore = 0;
+var userScore = 0;
 
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
     uc = e.target.id
@@ -40,12 +42,18 @@ const getResult = () => {
         case 'rockscissors':
         case 'paperrock':
         case 'scissorspaper':
+            userScore += 1
             result.innerHTML = "YOU WIN :)"
+            var conteudo = $("#score_u").html();
+            $("#score_u").html(userScore)
             break
         case 'rockpaper':
         case 'paperscissors':
         case 'scissorsrock':
+            computerScore += 1
             result.innerHTML = "YOU LOSE :("
+            var conteudo = $("#score_c").html();
+            $("#score_c").html(computerScore)
             break
         case 'rockrock':
         case 'paperpaper':

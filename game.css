@@ -67,3 +67,38 @@ button{
 button:hover{
     background-color: #eb788d;
 }
+.scoreboard{
+    width: 310px;
+    height: 110px;
+    margin: auto;
+    margin-top: -50px;
+}
+.player_c, .player_u{
+    width: 150px;
+    text-align: center;
+    font-size: 18pt;
+    background-color: #5EBAF2;
+    color: #000;
+}
+.player_c{
+    float: left;
+}
+.player_u{
+    float: right;
+}
+#score_c, #score_u{
+    width: 150px;
+    height: 70px;
+    text-align: center;
+    font-size: 45pt;
+    color: white;
+    background-color: #F2637E;
+}
+#score_c{
+    float: left;
+    border-bottom-left-radius: 20px;
+}
+#score_u{
+    float: right;
+    border-bottom-right-radius: 20px;
+}
