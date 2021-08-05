@@ -7,12 +7,15 @@ const userImg = document.getElementById('user_img')
 var computerScore = 0;
 var userScore = 0;
 
+
+
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
     uc = e.target.id
     userChoice.innerHTML = uc
     generateComputerChoice()
     getResult()
     generateImg()
+    levelUp()
 }))
 
 function generateComputerChoice() {
@@ -44,7 +47,6 @@ const getResult = () => {
         case 'scissorspaper':
             userScore += 1
             result.innerHTML = "YOU WIN :)"
-            var conteudo = $("#score_u").html();
             $("#score_u").html(userScore)
             break
         case 'rockpaper':
@@ -52,7 +54,6 @@ const getResult = () => {
         case 'scissorsrock':
             computerScore += 1
             result.innerHTML = "YOU LOSE :("
-            var conteudo = $("#score_c").html();
             $("#score_c").html(computerScore)
             break
         case 'rockrock':
@@ -64,28 +65,89 @@ const getResult = () => {
 const generateImg = () => {
     switch (cc) {
         case 'rock':
-            var conteudo = $("#computer_img").html();
             $("#computer_img").html('<img src="img/rock.png">')
             break
         case 'paper':
-            var conteudo = $("#computer_img").html();
             $("#computer_img").html('<img src="img/paper.png">')
             break
         case 'scissors':
-            var conteudo = $("#computer_img").html();
             $("#computer_img").html('<img src="img/scissorsleft.png">')
     }
     switch (uc) {
         case 'rock':
-            var conteudo = $("#user_img").html();
             $("#user_img").html('<img src="img/rock.png">')
             break
         case 'paper':
-            var conteudo = $("#user_img").html();
             $("#user_img").html('<img src="img/paper.png">')
             break
         case 'scissors':
-            var conteudo = $("#user_img").html();
             $("#user_img").html('<img src="img/scissorsright.png">')
+    }
+}
+
+const levelUp = () => {
+    switch (computerScore){
+        case 10:
+            $("#html").addClass("Level1");
+            $(".player_c").css("background-color", "#ff4a4a");
+            break
+        case 20:
+            $("#html").addClass("Level2");
+            $(".player_c").css("background-color", "#FFB467");
+            break
+        case 40:
+            $("#html").addClass("Level3");
+            $(".player_c").css("background-color", "#F7D58B");
+            break
+        case 60:
+            $("#html").addClass("Level4");
+            $(".player_c").css("background-color", "#72C187");
+            break
+        case 80:
+            $("#html").addClass("Level5");
+            $(".player_c").css("background-color", "#67D2FF");
+            break
+        case 90:
+            $("#html").addClass("Level6");
+            $(".player_c").css("background-color", "#9584FF");
+            break
+        case 100:
+            $("#html").addClass("Level7")
+            $(".player_c").css("background-color", "#FF9EFF")
+            $("#computer_img").html('<img src="img/100.gif">')
+            computerScore = 0
+            userScore = userScore - userScore
+    }
+    switch (userScore){
+        case 10:
+            $("#html").addClass("Level1");
+            $(".player_u").css("background-color", "#ff4a4a");
+            break
+        case 20:
+            $("#html").addClass("Level2");
+            $(".player_u").css("background-color", "#FFB467");
+            break
+        case 40:
+            $("#html").addClass("Level3");
+            $(".player_u").css("background-color", "#F7D58B");
+            break
+        case 60:
+            $("#html").addClass("Level4");
+            $(".player_u").css("background-color", "#72C187");
+            break
+        case 80:
+            $("#html").addClass("Level5");
+            $(".player_u").css("background-color", "#67D2FF");
+            break
+        case 90:
+            $("#html").addClass("Level6");
+            $(".player_u").css("background-color", "#9584FF");
+            break
+        case 100:
+            $("#html").addClass("Level7")
+            $(".player_c").css("background-color", "#FF9EFF")
+            $("#user_img").html('<img src="img/100.gif">')
+            computerScore = computerScore - computerScore
+            userScore = 0
     }
 }

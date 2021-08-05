@@ -5,7 +5,7 @@ html{
     width: 1000px;
     height: 500px;
     margin: auto;
-    margin-top: 7%;
+    margin-top: 5%;
     color: white;
     text-align: center;
 }
@@ -101,4 +101,110 @@ button:hover{
 #score_u{
     float: right;
     border-bottom-right-radius: 20px;
+}
+
+/*Level Up*/
+.Level1{
+    animation: level1 2s;
+}
+@keyframes level1 {
+    0% {
+      background-color: #252525;
+    }
+    70% {
+      background-color: #ff4a4a;
+    }
+    100%{
+        background-color: #252525;
+    }
+}
+
+.Level2{
+    animation: level2 2s;
+}
+@keyframes level2 {
+    0% {
+      background-color: #252525;
+    }
+    70% {
+      background-color: #FFCB67;
+    }
+    100%{
+        background-color: #252525;
+    }
+}
+
+.Level3{
+    animation: level3 2s;
+}
+@keyframes level3 {
+    0% {
+      background-color: #252525;
+    }
+    70% {
+      background-color: #F7D58B;
+    }
+    100%{
+        background-color: #252525;
+    }
+}
+
+.Level4{
+    animation: level4 2s;
+}
+@keyframes level4 {
+    0% {
+      background-color: #252525;
+    }
+    70% {
+      background-color: #72C187;
+    }
+    100%{
+        background-color: #252525;
+    }
+}
+
+.Level5{
+    animation: level5 2s;
+}
+@keyframes level5 {
+    0% {
+      background-color: #252525;
+    }
+    70% {
+      background-color: #67D2FF;
+    }
+    100%{
+        background-color: #252525;
+    }
+}
+
+.Level6{
+    animation: level6 2s;
+}
+@keyframes level6 {
+    0% {
+      background-color: #252525;
+    }
+    70% {
+      background-color: #9584FF;
+    }
+    100%{
+        background-color: #252525;
+    }
+}
+
+.Level7{
+    animation: level7 2s;
+}
+@keyframes level7 {
+    0% {
+      background-color: #252525;
+    }
+    70% {
+      background-color: #FF9EFF;
+    }
+    100%{
+        background-color: #252525;
+    }
 }
